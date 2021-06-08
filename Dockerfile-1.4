@@ -1,0 +1,7 @@
+# syntax=docker/dockerfile:1
+FROM pytorch/pytorch:1.4-cuda10.1-cudnn7-runtime
+RUN apt update && \
+    apt full-upgrade --yes && \
+    apt autoremove --yes && \
+    apt autoclean && \
+    apt clean
